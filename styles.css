@@ -1,7 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
 
 :root {
-    --max-content-width: 350px;
     --font-size: 1rem;
+    --section-padding-left-right: 5%;
+    --section-padding: 150px var(--section-padding-left-right) 100px;
     --padding-default: 15px;
     --small-margin: 10px;
     --mid-margin: 30px;
@@ -17,19 +26,17 @@
     --icon-color: rgba(0, 0, 0, 0.5);
 }
 
-
 html, body {
-    margin: 0;
-    padding: 0;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
+    background-color: var(--background-color);
     -webkit-user-select: none;
     -o-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    transition: all .3s ease-out;
 }
-
 
 body.dark {
     --background-color: var(--background-dark-color);
@@ -39,12 +46,26 @@ body.dark {
     --icon-color: var(--text-color);
 }
 
+.section-plr {
+    padding-left: var(--section-padding-left-right);
+    padding-right: var(--section-padding-left-right);
+}
+
+.plr-15{
+    padding: 0 15px;
+}
+
 header {
     display: flex;
     position: fixed;
-    width: 100vw;
+    width: 100%;
+    top: 0;
+    right: 0;
     background-color: aqua;
-    padding: 0 15px;
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
 }
 
 header,
@@ -69,14 +90,79 @@ header .logo-side img {
 }
 
 header .logo-side a {
-    color: red;
     font-size: .875rem;
     font-weight: 500;
     text-decoration: none;
+    cursor: pointer;
 }
+
+main {
+    height: 100vh;
+    /* width: 100%; */
+    z-index: 0;
+}
+
+section {
+    padding: var(--section-padding);
+}
+
+.hero {
+    display: block;
+    position: relative;
+    /* min-height: 480px; */
+    height: 100vh;
+    /* max-height: 93.50%; */
+    background-color: #432000;
+    /* background-image: url("./img/MyPicatBCL.jpg"); */
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.section-content{
+    display: block;
+    position: relative;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.section-text,
+.section-image {
+    display: inline-block;
+    position: relative;
+}
+
+.section-text {
+    width: 50%;
+    top: calc(15vh + 10%);
+}
+
+.section-content span {
+    font-size: 1.5rem;
+}
+.section-content h1 {
+    font-size: 3.5rem;
+}
+
+.section-content span,
+.section-content h1,
+.section-content h3 {
+    margin: 0;
+    line-height: 1.1;
+}
+
+
+.section-right{
+    background-color: beige;
+}
+
 
 @media screen and (max-width: 375px) {
     :root {
         --max-content-width: calc(100vw - 30px);
+    }
+    .section-text {
+        width: 100%;
+        top: 0;
     }
 }
