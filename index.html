@@ -1,65 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>MiPortfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DevJane Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200..900&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/style.css">
 
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <header class="section-plr">
-        <div class="logo-side">
-            <img src="./img/my_face.jpg" alt="Innocent's Logo">
-            <a class="porfolio-name" href="#">
-                MiPortfolio
-            </a>
-        </div>
-        <div class="nav-side">
-            <ul>
-                <li><a href=""></a></li>
+    </head>
+    <body>
+        <header>
+            <div class="logo-side">
+                <img src="./img/my_face.jpg" alt="Innocent's Logo">
+                <a class="porfolio-name" href="#">
+                    MiPortfolio
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <div class="dots-overlay"></div>
+            <div class="section__text text-shadow">
+                <span class="fs-small">Hi, I'm</span>
+                <h1 class="section__title section__title--intro">
+                    <strong>Innocent Rangaka</strong>
+                </h1>
+                <div class="section__subtitle--intro">
+                    <p class="section__subtitle">
+                        front-end dev&nbsp;<span>|</span>&nbsp;
+                    </p>
+                    <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 3L5.77778 20.0899L12 22L18.2222 20.0899L20 3H4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M17 7H7.5L8 11.5H16L15.5 17L12 18L8.5 17L8.25 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 3L5.77778 20.0899L12 22L18.2222 20.0899L20 3H4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M7 7H16.5L15.5 17L12 18L8.5 17L8.25 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M16 11.5H7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bootstrap" viewBox="0 0 16 16">
+                        <path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z"/>
+                        <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z"/>
+                    </svg>
+                    <svg width="24" viewBox="0 0 28 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.774 19.7a3.727 3.727 0 0 0 3.376 2.078c1.418 0 2.324-.709 2.324-1.688c0-1.173-.931-1.589-2.491-2.272l-.856-.367c-2.469-1.052-4.11-2.37-4.11-5.156c0-2.567 1.956-4.52 5.012-4.52A5.058 5.058 0 0 1 26.9 10.52l-2.665 1.711a2.327 2.327 0 0 0-2.2-1.467a1.489 1.489 0 0 0-1.638 1.467c0 1.027.636 1.442 2.1 2.078l.856.366c2.908 1.247 4.549 2.518 4.549 5.376c0 3.081-2.42 4.769-5.671 4.769a6.575 6.575 0 0 1-6.236-3.5zM6.686 20c.538.954 1.027 1.76 2.2 1.76c1.124 0 1.834-.44 1.834-2.15V7.975h3.422v11.683c0 3.543-2.078 5.156-5.11 5.156A5.312 5.312 0 0 1 3.9 21.688z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" viewBox="0 0 32 32">
+                        <circle cx="16" cy="15.974" r="2.5" fill="currentColor"/>
+                        <path d="M16 21.706a28.385 28.385 0 0 1-8.88-1.2a11.3 11.3 0 0 1-3.657-1.958A3.543 3.543 0 0 1 2 15.974c0-1.653 1.816-3.273 4.858-4.333A28.755 28.755 0 0 1 16 10.293a28.674 28.674 0 0 1 9.022 1.324a11.376 11.376 0 0 1 3.538 1.866A3.391 3.391 0 0 1 30 15.974c0 1.718-2.03 3.459-5.3 4.541a28.8 28.8 0 0 1-8.7 1.191zm0-10.217a27.948 27.948 0 0 0-8.749 1.282c-2.8.977-4.055 2.313-4.055 3.2c0 .928 1.349 2.387 4.311 3.4A27.21 27.21 0 0 0 16 20.51a27.6 27.6 0 0 0 8.325-1.13C27.4 18.361 28.8 16.9 28.8 15.974a2.327 2.327 0 0 0-1.01-1.573a10.194 10.194 0 0 0-3.161-1.654A27.462 27.462 0 0 0 16 11.489z" fill="currentColor"/>
+                        <path d="M10.32 28.443a2.639 2.639 0 0 1-1.336-.328c-1.432-.826-1.928-3.208-1.327-6.373a28.755 28.755 0 0 1 3.4-8.593a28.676 28.676 0 0 1 5.653-7.154a11.376 11.376 0 0 1 3.384-2.133a3.391 3.391 0 0 1 2.878 0c1.489.858 1.982 3.486 1.287 6.859a28.806 28.806 0 0 1-3.316 8.133a28.385 28.385 0 0 1-5.476 7.093a11.3 11.3 0 0 1-3.523 2.189a4.926 4.926 0 0 1-1.624.307zm1.773-14.7a27.948 27.948 0 0 0-3.26 8.219c-.553 2.915-.022 4.668.75 5.114c.8.463 2.742.024 5.1-2.036a27.209 27.209 0 0 0 5.227-6.79a27.6 27.6 0 0 0 3.181-7.776c.654-3.175.089-5.119-.713-5.581a2.327 2.327 0 0 0-1.868.089A10.194 10.194 0 0 0 17.5 6.9a27.464 27.464 0 0 0-5.4 6.849z" fill="currentColor"/>
+                        <path d="M21.677 28.456c-1.355 0-3.076-.82-4.868-2.361a28.756 28.756 0 0 1-5.747-7.237a28.676 28.676 0 0 1-3.374-8.471a11.376 11.376 0 0 1-.158-4A3.391 3.391 0 0 1 8.964 3.9c1.487-.861 4.01.024 6.585 2.31a28.8 28.8 0 0 1 5.39 6.934a28.384 28.384 0 0 1 3.41 8.287a11.3 11.3 0 0 1 .137 4.146a3.543 3.543 0 0 1-1.494 2.555a2.59 2.59 0 0 1-1.315.324zm-9.58-10.2a27.949 27.949 0 0 0 5.492 6.929c2.249 1.935 4.033 2.351 4.8 1.9c.8-.465 1.39-2.363.782-5.434A27.212 27.212 0 0 0 19.9 13.74a27.6 27.6 0 0 0-5.145-6.64c-2.424-2.152-4.39-2.633-5.191-2.169a2.327 2.327 0 0 0-.855 1.662a10.194 10.194 0 0 0 .153 3.565a27.465 27.465 0 0 0 3.236 8.1z" fill="currentColor"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24"  height="24"viewBox="0 0 32 32">
+                        <path fill="currentColor" d="M22.292 11.717h-.01a.033.033 0 0 1-.017-.01a.08.08 0 0 1-.02-.068l.565-3.451l2.651 2.648L22.7 12a.069.069 0 0 1-.024.005h-.006s-.007 0-.014-.011a1.267 1.267 0 0 0-.364-.277zm3.844-.21l2.834 2.831c.589.588.883.882.991 1.222a1.355 1.355 0 0 1 .039.152l-6.772-2.864h-.011c-.027-.011-.059-.024-.059-.052s.032-.041.059-.052h.008zm3.748 5.114a5.3 5.3 0 0 1-.914 1.042l-3.194 3.19l-4.132-.86h-.022c-.036-.006-.076-.012-.076-.046a1.249 1.249 0 0 0-.479-.871c-.017-.017-.012-.043-.008-.068v-.01l.778-4.766v-.016c0-.036.011-.079.045-.079a1.265 1.265 0 0 0 .848-.486a.064.064 0 0 1 .02-.02a.1.1 0 0 1 .075.01zm-4.843 4.966l-5.253 5.248l.9-5.521v-.028c.007-.018.026-.025.045-.033h.009a1.355 1.355 0 0 0 .508-.377a.12.12 0 0 1 .066-.045a.074.074 0 0 1 .021 0zm-6.365 6.358l-.592.592l-6.546-9.451l-.008-.01a.063.063 0 0 1-.019-.044a.066.066 0 0 1 .016-.032l.007-.009c.02-.029.037-.058.056-.09l.015-.025a.1.1 0 0 1 .038-.043a.08.08 0 0 1 .053 0l7.253 1.494a.127.127 0 0 1 .056.024a.059.059 0 0 1 .014.031v.014a1.282 1.282 0 0 0 .749.844c.02.01.011.033 0 .057a.213.213 0 0 0-.011.033c-.087.553-.871 5.327-1.081 6.615zm-1.237 1.235a2.739 2.739 0 0 1-.985.752a1.459 1.459 0 0 1-.882 0c-.341-.108-.635-.4-1.224-.99l-6.574-6.567l1.717-2.661a.105.105 0 0 1 .029-.034a.078.078 0 0 1 .067 0a1.736 1.736 0 0 0 .521.077a1.786 1.786 0 0 0 .676-.137a.052.052 0 0 1 .055 0a.241.241 0 0 1 .021.024zm-10.3-7.438l-1.507-1.507l2.979-1.269a.069.069 0 0 1 .024 0c.025 0 .039.025.053.048l.01.016c.028.043.057.081.085.118l.009.012c.008.012 0 .024-.006.037zm-2.174-2.173l-1.908-1.906c-.325-.324-.56-.559-.723-.762l5.8 1.2h.022c.036.006.076.012.076.046s-.043.053-.08.068l-.017.007zM2 15.921a1.5 1.5 0 0 1 .066-.362c.108-.34.4-.634.991-1.222L5.5 11.9c.4.59 3.061 4.426 3.371 4.87l.01.013c.02.027.042.056.02.078a2 2 0 0 0-.289.385a.122.122 0 0 1-.036.045a.041.041 0 0 1-.031 0zm4.152-4.675l3.283-3.28c.309.135 1.432.609 2.436 1.033c.761.321 1.454.614 1.671.707a.08.08 0 0 1 .051.04a.073.073 0 0 1 0 .044a1.532 1.532 0 0 0-.033.315a1.46 1.46 0 0 0 .416 1.02c.022.021 0 .053-.019.081l-.01.015l-3.333 5.158a.108.108 0 0 1-.031.036a.081.081 0 0 1-.063 0a1.656 1.656 0 0 0-.4-.054a2.2 2.2 0 0 0-.381.046a.044.044 0 0 1-.039 0a.146.146 0 0 1-.033-.037zM10.1 7.3l4.251-4.246c.589-.588.883-.882 1.224-.99a1.459 1.459 0 0 1 .882 0c.341.108.635.4 1.224.99l.921.92l-3.025 4.681a.127.127 0 0 1-.03.035a.08.08 0 0 1-.066 0a1.652 1.652 0 0 0-.459-.065a1.533 1.533 0 0 0-.945.336c-.02.019-.049.007-.074 0c-.395-.175-3.466-1.472-3.903-1.661zm9.143-2.685l2.792 2.789l-.672 4.16v.011a.082.082 0 0 1-.006.028c-.007.015-.021.018-.036.021h-.016a1.329 1.329 0 0 0-.385.195l-.014.013a.043.043 0 0 1-.03.018a.065.065 0 0 1-.031-.005l-4.253-1.805h-.009c-.027-.011-.059-.024-.059-.052a1.6 1.6 0 0 0-.217-.653l-.009-.015c-.021-.034-.043-.069-.026-.1zM16.367 10.9l3.987 1.687a.092.092 0 0 1 .055.042a.072.072 0 0 1 0 .041a1.045 1.045 0 0 0-.021.192v.112c0 .027-.029.039-.055.05h-.009c-.631.269-8.868 3.777-8.88 3.777a.048.048 0 0 1-.038-.012c-.022-.021 0-.053.019-.081l.01-.015l3.277-5.067l.006-.009c.019-.031.041-.065.076-.065l.033.005a1.4 1.4 0 0 0 .206.02a1.483 1.483 0 0 0 1.236-.655a.113.113 0 0 1 .024-.029a.078.078 0 0 1 .074.007zM11.8 17.611l8.977-3.824a.037.037 0 0 1 .025.013a1.372 1.372 0 0 0 .13.112l.02.013c.018.011.037.022.038.041v.018l-.77 4.716v.019c0 .037-.01.079-.045.079a1.262 1.262 0 0 0-1 .618v.006a.1.1 0 0 1-.037.042a.088.088 0 0 1-.051 0l-7.159-1.475s-.12-.377-.128-.378z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="">
+                        <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/>
+                        <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/>
+                        <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/>
+                        <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/>
+                        <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/>
+                    </svg>
+                </div>
+                <div class="buttons-container">
+                    <button class="btn transparent-effect" role="button">Know More</button>
+                    <button class="btn" role="button">View My Portfolio</button>
+                </div>
+            </div>
+            <div class="section__image">
+                <img src="img/my_bcl_pic.jpg" alt="a picture of Jane Smith smiling" class="intro__img">
+                <div class="theme-overlay">
+                    <img src="img/my_bcl_pic.jpg" alt="a picture of Jane Smith smiling" class="intro__img2">
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- My services -->
+        <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">What I do</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Design + Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> <!-- / service -->
+                
+                <div class="service">
+                    <h3>E-Commerce</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> <!-- / service -->
+                
+                <div class="service">
+                    <h3>WordPress</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> <!-- / service -->
+            </div> <!-- / services -->
+            
+            <a href="#work" class="btn">My Work</a>
+        </section>
+        
+        
+        <!-- About me -->
+        <section class="about-me" id="about">
+           <h2 class="section__title section__title--about">Who I am</h2>
+           <p class="section__subtitle section__subtitle--about">Designer & developer based out of NYC</p>
+           
+           <div class="about-me__body">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+           </div>
+           
+           <img src="img/dev-jane-02.jpg" alt="Jane leaning against a bus" class="about-me__img">
+        </section>
+        
+        <!-- My Work -->
+        <section class="my-work" id="work">
+            <h2 class="section__title section__title--work">My work</h2>
+            <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+            
+            <div class="portfolio">
+                <!-- Portfolio item 01 -->
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/portfolio-01.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 02 -->
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/portfolio-02.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 03 -->
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/portfolio-03.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 04 -->
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/portfolio-04.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 05 -->
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/portfolio-05.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 06 -->
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/portfolio-06.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 07 -->
+                <a href="portfolio-item.html" class="portfolio__item">
+                    <img src="img/portfolio-07.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 08 -->
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-08.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 09 -->
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-09.jpg" alt="" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item 0 0-->
+                <a href="#" class="portfolio__item">
+                    <img src="img/portfolio-10.jpg" alt="" class="portfolio__img">
+                </a>
+            </div>
+        </section>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:hello@jane.dev" class="footer__link">hello@jane.dev</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://codepen.io">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="http://dribbble.com">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://twitter.com">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
             </ul>
-        </div>
-    </header>
-    <main>
-        <section id="hero" class="hero">
-            <div class="section-content">
-                <div class="section-text">
-                    <span>Hi, I'm</span>
-                    <h1>Innocent Rangaka</h1>
-                    <h3>Software Developer</h3>
-                </div>
-                <div class="section-image">
-                    <p>jdijsdv sj njcjn sdhb vicvjasninxzcvjsndc</p>
-                </div>
-            </div>
-        </section>
-        <section id="about" class="">
-            <div class="section-content">
-                <h2>About Me</h2>
-                <p>Know More</p>
-            </div>
-        </section>
-        <section id="projects" class="">
-            <div class="section-content">
-                <h2>My Projects</h2>
-                <p>Know More</p>
-            </div>
-        </section>
-        <section id="contacts" class="">
-            <div class="section-content">
-                <h2>Contact Me</h2>
-                <p>Know More</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div></div>
-    </footer>
-    <script src="./scripts.js" type="module"></script>
-</body>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
 </html>

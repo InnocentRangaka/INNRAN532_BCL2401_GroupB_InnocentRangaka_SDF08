@@ -103,20 +103,43 @@ main {
 }
 
 section {
+    width: 100%;
+    height: 100vh;
     padding: var(--section-padding);
+    box-sizing: border-box;
 }
 
 .hero {
     display: block;
     position: relative;
-    /* min-height: 480px; */
-    height: 100vh;
+    min-height: 480px;
     /* max-height: 93.50%; */
-    background-color: #432000;
-    /* background-image: url("./img/MyPicatBCL.jpg"); */
+    background-color: #494746;
+    /* background-image: url("./img/my_old_pic.jpg"); */
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
     align-items: center;
     justify-content: flex-start;
 }
+
+.dots-overlay {
+    display: block;
+    position: absolute;
+    background-color: #ffffff00;
+    opacity: 1;
+    background-image: radial-gradient(#494746 0.75px, transparent 0.75px), 
+                      radial-gradient(#494746 0.75px, #ffffff00 0.75px);
+    background-size: 10px 10px;
+    background-position: 0 0,5px 5px;
+    /* background-repeat: repeat-y; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
 
 .section-content{
     display: block;
@@ -144,11 +167,14 @@ section {
     font-size: 3.5rem;
 }
 
-.section-content span,
-.section-content h1,
-.section-content h3 {
+.section-text span,
+.section-text h1,
+.section-text h3 {
     margin: 0;
     line-height: 1.1;
+}
+.section-text h1 {
+    margin: 8px 0 1.5rem;
 }
 
 
