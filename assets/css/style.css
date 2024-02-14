@@ -193,7 +193,7 @@ h3 { font-size: var(--fs-h3) }
 
 .section__title--intro {
     font-weight: var(--fw-reg);
-    
+    color: var(--clr-accent);
     line-height: 1.1;
 }
 
@@ -213,10 +213,14 @@ h1.section__subtitle--intro {
     padding-left: 0;
 }
 
+h1.section__title.section__title--intro{
+    position: relative;
+    left: -5px;
+}
+
 .section__subtitle--intro span {
     position: relative;
     color: var(--clr-accent);
-    left: -5px;
 }
 
 .section__subtitle--intro,
@@ -505,12 +509,12 @@ header .logo-side .porfolio-name {
 /*  My services section  */
 
 .my-services {
-    background-color: var(--clr-dark);
-    background-image: url(../img/services-bg.jpg);
+    /* background-color: var(--clr-dark); */
+    /* background-image: url(../img/services-bg.jpg); */
     background-size: cover;
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
-    text-align: center;
+    /* text-align: center; */
 }
 
 .section__title--services {
@@ -543,6 +547,8 @@ header .logo-side .porfolio-name {
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
+        justify-content: space-evenly;
+        color: var(--clr-dark);
     }
     
     .service + .service {
