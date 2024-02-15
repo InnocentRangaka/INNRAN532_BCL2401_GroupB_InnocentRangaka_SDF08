@@ -909,9 +909,13 @@ background: linear-gradient(343deg, rgba(238,240,244,1) 0%, rgba(255,255,255,1) 
     font-weight: var(--fw-bold);
 }
 
+.footer li:hover a,.footer li:hover a svg,
 .footer__link:hover,
-.social-list__link:hover {
-    opacity: .7;
+.social-list__item:hover .social-list__link,
+.social-list__link:hover,
+.social-list__link:hover svg {
+    /* opacity: .7; */
+    color: var(--clr-accent)
 }
 
 .footer__link:hover {
@@ -924,14 +928,19 @@ background: linear-gradient(343deg, rgba(238,240,244,1) 0%, rgba(255,255,255,1) 
     justify-content: center;
     margin: 2em 0 0;
     padding: 0;
+    place-items: center;
+    gap: 1em;
 }
 
 .social-list__item {
-    margin: 0 .5em;
+    /* margin: 0 .5em; */
 }
 
 .social-list__link {
-    padding: .5em;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    display: flex;
 }
 
 
