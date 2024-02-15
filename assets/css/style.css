@@ -22,7 +22,7 @@
     --clr-light-rgb: 238, 240, 244;
     --clr-dark: #303030;
     --clr-dark-rgb: 48,48,48;
-    --clr-accent: #f8333c;
+    --clr-accent: #FF0000;
     --clr-lighter: #ffffff;
 
     --dots-color: #a1a1a1;
@@ -108,6 +108,18 @@ strong { font-weight: var(--fw-bold) }
 
 .text-shadow {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-dark {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    color: var(--clr-accent);
+}
+
+.d-grid {
+    display: grid;
 }
 
 /* Buttons */
@@ -755,7 +767,7 @@ button:active .hamburger:after {
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
     gap: 1em;
 }
 
@@ -790,23 +802,53 @@ button:active .hamburger:after {
     background-size: cover;
 }
 
+.contact-me .section-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "name name"
+        "title title"
+        "contacts form";
+    grid-column-gap: 2em;
+    grid-row-gap: 1em;
+}
+
+.contact-me .section-container .section__name {
+    grid-area: name;
+}
+.contact-me .section-container .section__title {
+    grid-area: title;
+}
+.contact-me .section-container .contacts {
+    grid-area: contacts;
+    display: grid;
+    border-radius: 20px;
+    padding: 30px 30px 30px 0;
+    gap: 40px;
+}
+.contact-me .section-container form {
+    grid-area: form;
+}
+
+.contact-me form {
+    max-width: 565px;
+}
 
 .contact-me form fieldset {
     display: grid;
-    max-width: 565px;
     border-radius: 20px;
     padding: 30px;
-    display: grid;
-    gap: 15px;
+    gap: 40px;
     background-color: rgba(var(--clr-light-rgb),.8);
 }
 
-/* .contact-me form fieldset legend {
-    padding: 0px 15px;
-    background-color: rgba(var(--clr-light-rgb),.8);
-} */
 
-.contact-me form fieldset h3 {
+.contact-me form .form-input-group {
+    display: grid;
+    gap: 15px;
+}
+
+.contact-me form .fieldset h3 {
     padding: 0px 15px;
     /* background-color: rgba(var(--clr-light-rgb),.8); */
 }
@@ -830,6 +872,11 @@ button:active .hamburger:after {
 
 .contact-me form textarea {
     min-height: 100px;
+}
+
+.contact-me form input:focus-visible,
+.contact-me form textarea:focus-visible {
+    outline-color: var(--clr-accent);
 }
 
 /* footer */
