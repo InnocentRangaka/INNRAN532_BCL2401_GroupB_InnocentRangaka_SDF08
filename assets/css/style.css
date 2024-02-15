@@ -26,6 +26,7 @@
     --clr-lighter: #ffffff;
 
     --dots-color: #a1a1a1;
+    --dots-color-dark: #000000;
     --dots-bg-color: #ffffff00;
     
     --fs-h1: 3rem;
@@ -90,6 +91,7 @@ section {
     min-height: 100vh;
     padding: var(--section-padding);
     box-sizing: border-box;
+    z-index: 0;
 }
 
 img {
@@ -134,6 +136,10 @@ button,
     border: 2px solid transparent;
     transition: transform 200ms ease-in-out;
     border-radius: 8px;
+}
+
+a.btn {
+    padding: .7em 2.5em;
 }
 
 .btn.transparent-effect {
@@ -188,6 +194,16 @@ h3 { font-size: var(--fs-h3) }
 
 .section-bg {
     background-color: var(--clr-lighter);
+}
+
+.section-container {
+    display: grid;
+    grid-column-gap: 2em;
+    grid-row-gap: 1em;
+}
+
+.section__name {
+    color: var(--clr-dark)
 }
 
 .section__title {
@@ -291,8 +307,8 @@ header .logo-side .porfolio-name {
 
 .nav {
     position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
+    background: var(--clr-light);
+    color: var(--clr-dark);
     top: 0;
     bottom: 0;
     left: 0;
@@ -375,7 +391,7 @@ header .logo-side .porfolio-name {
 
 .nav-open .hamburger,
 .nav-open .hamburger::before {
-    background: var(--clr-accent);
+    background: var(--clr-dark);
 }
 
 .nav-open .hamburger {
@@ -388,6 +404,15 @@ header .logo-side .porfolio-name {
 
 .nav-open .hamburger::after {
     opacity: 0;
+}
+
+button:hover .hamburger,
+button:hover .hamburger:before,
+button:hover .hamburger:after,
+button:active .hamburger,
+button:active .hamburger:before,
+button:active .hamburger:after {
+    background-color: var(--clr-accent) !important;
 }
 
 
@@ -416,13 +441,11 @@ header .logo-side .porfolio-name {
     display: inline-block;
 }
 
-.dots-overlay {
+.dots-overlay, .dots-overlay-dark {
     display: block;
     position: absolute;
     background-color: var(--dots-bg-color);
     opacity: 1;
-    background-image: radial-gradient(var(--dots-color) 0.75px, var(--dots-bg-color) 0.75px), 
-                      radial-gradient(var(--dots-color) 0.75px, var(--dots-bg-color) 0.75px);
     background-size: 10px 10px;
     background-position: 0 0,5px 5px;
     /* background-repeat: repeat-y; */
@@ -431,6 +454,27 @@ header .logo-side .porfolio-name {
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+.dots-overlay {
+    background-image: radial-gradient(var(--dots-color) 0.75px, var(--dots-bg-color) 0.75px), 
+                      radial-gradient(var(--dots-color) 0.75px, var(--dots-bg-color) 0.75px);
+}
+
+.dots-overlay-dark {
+    background-image: radial-gradient(var(--dots-color-dark) 0.75px, var(--dots-bg-color) 0.75px), 
+                      radial-gradient(var(--dots-color-dark) 0.75px, var(--dots-bg-color) 0.75px);
+}
+
+.color-overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-light);
+    opacity: .5;
+    z-index: -2;
+    border-radius: 20px;
 }
 
 .section__image {
@@ -450,6 +494,7 @@ header .logo-side .porfolio-name {
             "text image";
         grid-template-columns: max-content max-content;
         justify-content: space-between;
+        z-index: 0;
     }
 
     /* .buttons-container{ grid-area: buttons-container; } */
@@ -471,17 +516,17 @@ header .logo-side .porfolio-name {
         right: 37vw;
         z-index: -1;
         border-radius: 20px;
-        background-color: red;
-        filter: hue-rotate(--custom-red-hue);
     }
 
     .intro__img2 {
+        position: relative;
         grid-area: img;
         min-width: 250px;
         max-width: calc(626px * .5);
         z-index: -1;
         border-radius: 20px;
         filter: grayscale(100%);
+        z-index: -3;
     }  
     
     .section__subtitle--intro {
@@ -526,7 +571,7 @@ header .logo-side .porfolio-name {
     position: relative;
 }
 
-.section__title--services::after {
+/* .section__title--services::after {
     content: '';
     display: block;
     width: 2em;
@@ -534,9 +579,10 @@ header .logo-side .porfolio-name {
     margin: 0.5em auto 1em;
     background: var(--clr-light);
     opacity: 0.25;
-}
+} */
 
 .services {
+    margin-top: 4em;
     margin-bottom: 4em;
 }
 
@@ -562,7 +608,7 @@ header .logo-side .porfolio-name {
 @media (min-width: 800px) {
     .services {
         display: flex;
-        max-width: 90%;
+        /* max-width: 90%; */
         margin-left: auto;
         margin-right: auto;
         justify-content: space-between;
@@ -631,6 +677,7 @@ header .logo-side .porfolio-name {
 }
 
 .about-me .about-me__body {
+    margin-top: 2em;
     margin-bottom: 2em;
 }
 
@@ -662,10 +709,11 @@ header .logo-side .porfolio-name {
     grid-row-gap: 2em;
     gap: 15px;
     margin-right: 25%;
+    min-height: max-content;
 }
 
 @media (min-width: 600px) {
-    .section-container {
+    .about-me .section-container {
         display: grid;
         grid-template-columns: 1fr 250px;
         grid-template-areas: 
@@ -673,7 +721,7 @@ header .logo-side .porfolio-name {
             "subtitle img"
             "text img";
         grid-column-gap: 2em;
-        grid-row-gap: 2em;
+        grid-row-gap: 1em;
     }
     
     .section__title--about {
@@ -734,6 +782,55 @@ header .logo-side .porfolio-name {
     opacity: .5;
 }
 
+.contact-me {
+    position: relative;
+    box-sizing: border-box;
+    background-image: url("../../img/portfolio-02.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.contact-me form fieldset {
+    display: grid;
+    max-width: 565px;
+    border-radius: 20px;
+    padding: 30px;
+    display: grid;
+    gap: 15px;
+    background-color: rgba(var(--clr-light-rgb),.8);
+}
+
+/* .contact-me form fieldset legend {
+    padding: 0px 15px;
+    background-color: rgba(var(--clr-light-rgb),.8);
+} */
+
+.contact-me form fieldset h3 {
+    padding: 0px 15px;
+    /* background-color: rgba(var(--clr-light-rgb),.8); */
+}
+
+.contact-me form label {
+    display: block;
+    padding-left: 15px;
+    margin-bottom: .5em;
+}
+
+.contact-me form input,
+.contact-me form textarea {
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.contact-me form input {
+    height: 48px;
+}
+
+.contact-me form textarea {
+    min-height: 100px;
+}
 
 /* footer */
 

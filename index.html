@@ -104,31 +104,35 @@
         
         <!-- My services -->
         <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">What I do</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Design + Development</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div> <!-- / service -->
+            <div class="section-container">
+                <span class="section__name fs-small">About Me</span>
+                <h2 class="section__title section__title--services">What I do</h2>
+                <div class="services">
+                    <div class="service">
+                        <h3>Design + Development</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div> <!-- / service -->
+                    
+                    <div class="service">
+                        <h3>E-Commerce</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div> <!-- / service -->
+                    
+                    <div class="service">
+                        <h3>WordPress</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div> <!-- / service -->
+                </div> <!-- / services -->
                 
-                <div class="service">
-                    <h3>E-Commerce</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div> <!-- / service -->
-                
-                <div class="service">
-                    <h3>WordPress</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div> <!-- / service -->
-            </div> <!-- / services -->
-            
-            <a href="#work" class="btn">My Work</a>
+                <a href="#work" class="btn">My Work</a>
+            </div>
         </section>
         
         
         <!-- About me -->
         <section class="about-me text-shadow section-bg" id="about">
            <div class="section-container">
+            <span class="section__name fs-small">My Services</span>
                 <div class="section-info">
                     <h2 class="section__title section__title--about">Who I am</h2>
                     <p class="section__subtitle section__subtitle--about"><span>Designer & developer</span> based out of Chaneng, RTB</p>
@@ -203,6 +207,42 @@
                 <a href="#" class="portfolio__item">
                     <img src="img/portfolio-10.jpg" alt="" class="portfolio__img">
                 </a>
+            </div>
+        </section>
+
+         <!-- Contact Me -->
+         <section class="contact-me" id="contact">
+            <div class="dots-overlay-dark"></div>
+            <div class="section-container">
+                <span class="section__name fs-small">About Me</span>
+                <h2 class="section__title section__title--services">What I do</h2>
+                <!-- Contact Form -->
+                <form id="contact-form" name="contact-form" method="get" action="./">
+                    <fieldset>
+                      <h3>Contact Me</h3>
+                  
+                      <div class="form-input-group">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+                          </div>
+                      </div>
+                  
+                      <button type="submit">Send Message</button>
+                    </fieldset>
+                  </form>
+                
+                <a href="#work" class="btn">My Work</a>
             </div>
         </section>
         
