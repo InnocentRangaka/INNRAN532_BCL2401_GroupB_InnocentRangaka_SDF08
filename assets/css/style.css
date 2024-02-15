@@ -926,14 +926,14 @@ background: linear-gradient(343deg, rgba(238,240,244,1) 0%, rgba(255,255,255,1) 
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0 0;
+    margin: 2em 0;
     padding: 0;
     place-items: center;
     gap: 1em;
 }
 
-.social-list__item {
-    /* margin: 0 .5em; */
+.small-text {
+    font-size: 60%;
 }
 
 .social-list__link {
