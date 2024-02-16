@@ -12,6 +12,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200..900&display=swap" rel="stylesheet">
 
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
+
+        <link rel="manifest" href="./site.webmanifest">
         <link rel="stylesheet" href="./assets/css/style.css">
 
     </head>
@@ -28,10 +33,10 @@
             </button>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                    <li class="nav__item"><a href="/#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="/#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="/#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="/#work" class="nav__link">My Work</a></li>
                 </ul>
             </nav>
         </header>
@@ -89,8 +94,8 @@
                     </svg>
                 </div>
                 <div class="buttons-container">
-                    <button class="btn transparent-effect" role="button">Know More</button>
-                    <button class="btn" role="button">See My Work</button>
+                    <a class="btn transparent-effect" href="#about" role="button">Know More</a>
+                    <a class="btn" href="#work" role="button">See My Work</a>
                 </div>
             </div>
             <div class="section__image">
@@ -136,7 +141,7 @@
             <span class="section__name fs-small">My Services</span>
                 <div class="section-info">
                     <h2 class="section__title section__title--about">Who I am</h2>
-                    <p class="section__subtitle section__subtitle--about"><span>Designer & developer</span> based out of Chaneng, RTB</p>
+                    <p class="section__subtitle section__subtitle--about"><span>Front-end developer</span> based out of Chaneng, RTB</p>
 
                     <div class="about-me__body">
                         <p>A software engineering student at Bafokeng CodeLab, fueled by a passion to create impactful solutions through code. My journey began with the foundational building blocks – HTML, CSS & Bootstrap (Intermediate) and Javascript (Intermediate) – where I learned to breathe life into static pages. Now, I'm delving into the exciting world of frameworks, exploring React (Beginner) for dynamic interfaces, and Tailwind (Beginners) for streamlined styling.</p>
@@ -160,28 +165,48 @@
                 <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
                 
                 <div class="portfolio">
+
                     <!-- Portfolio item 01 -->
-                    <a href="portfolio-item.html" class="portfolio__item">
+                    <a href="portfolio-item.html" class="portfolio__item" data-view-path="https://ir532blackjack.netlify.app">
+                        <img src="img/SDF04.jpeg" alt="" class="portfolio__img">
+                        <!-- <span class="portfolio__title">Portfolio 01</span> -->
+                    </a>
+
+                    <!-- Portfolio item 01 -->
+                    <a href="portfolio-item.html" class="portfolio__item" data-view-path="https://ir532petsprofile.netlify.app">
+                        <img src="img/SDF06.jpeg" alt="" class="portfolio__img">
+                        <!-- <span class="portfolio__title">Portfolio 01</span> -->
+                    </a>
+
+                    <!-- Portfolio item 01 -->
+                    <a href="portfolio-item.html" class="portfolio__item" data-view-path="https://ir532keeplist.netlify.app">
+                        <img src="img/SDF07.jpeg" alt="" class="portfolio__img">
+                        <!-- <span class="portfolio__title">Portfolio 01</span> -->
+                    </a>
+
+                    <!-- Portfolio item 01 -->
+                    <a href="portfolio-item.html" class="portfolio__item" data-view-path="">
                         <img src="img/portfolio-01.jpg" alt="" class="portfolio__img">
+                        <!-- <span class="portfolio__title">Portfolio 01</span> -->
                     </a>
                     
                     <!-- Portfolio item 02 -->
-                    <a href="portfolio-item.html" class="portfolio__item">
+                    <a href="portfolio-item.html" class="portfolio__item" data-view-path="">
                         <img src="img/portfolio-02.jpg" alt="" class="portfolio__img">
                     </a>
                     
                     <!-- Portfolio item 03 -->
-                    <a href="portfolio-item.html" class="portfolio__item">
+                    <a href="portfolio-item.html" class="portfolio__item" data-view-path="">
                         <img src="img/portfolio-03.jpg" alt="" class="portfolio__img">
                     </a>
                     
                     <!-- Portfolio item 04 -->
-                    <a href="portfolio-item.html" class="portfolio__item">
+                    <a href="portfolio-item.html" class="portfolio__item" data-view-path="">
                         <img src="img/portfolio-04.jpg" alt="" class="portfolio__img">
                     </a>
                     
                     <!-- Portfolio item 05 -->
-                    <a href="portfolio-item.html" class="portfolio__item">
+                    <a href="portfolio-item.html" class="portfolio__item" data-view-path="">
                         <img src="img/portfolio-05.jpg" alt="" class="portfolio__img">
                     </a>
                     
@@ -191,22 +216,22 @@
                     </a>
                     
                     <!-- Portfolio item 07 -->
-                    <a href="portfolio-item.html" class="portfolio__item">
+                    <a href="portfolio-item.html" class="portfolio__item" data-view-path="">
                         <img src="img/portfolio-07.jpg" alt="" class="portfolio__img">
                     </a>
                     
                     <!-- Portfolio item 08 -->
-                    <a href="#" class="portfolio__item">
+                    <a href="#" class="portfolio__item" data-view-path="">
                         <img src="img/portfolio-08.jpg" alt="" class="portfolio__img">
                     </a>
                     
                     <!-- Portfolio item 09 -->
-                    <a href="#" class="portfolio__item">
+                    <a href="#" class="portfolio__item" data-view-path="">
                         <img src="img/portfolio-09.jpg" alt="" class="portfolio__img">
                     </a>
                     
                     <!-- Portfolio item 0 0-->
-                    <a href="#" class="portfolio__item">
+                    <a href="#" class="portfolio__item" data-view-path="">
                         <img src="img/portfolio-10.jpg" alt="" class="portfolio__img">
                     </a>
                 </div>
@@ -297,7 +322,7 @@
         </footer>
         
         
-        <script src="js/index.js"></script>
+        <script src="./assets/js/index.js"></script>
         
     </body>
 </html>

@@ -28,16 +28,16 @@
             </button>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                    <li class="nav__item"><a href="./#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="./#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="./#about" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="./#work" class="nav__link">My Work</a></li>
                 </ul>
             </nav>
         </header>
 
-        <section class="intro portfolio-item-details" id="home">
-            <div class="dots-overlay"></div>
+        <section class="intro portfolio-item-details" id="">
+            <div class="blurred-overlay"></div>
             <div class="section__text text-shadow">
                 <span class="fs-small">The title </span>
                 <h1 class="section__title section__title--intro text-shadow-dark">
@@ -49,43 +49,27 @@
                     </p>
                     <p class="section__subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe et amet tenetur! Fugit sequi optio corrupti fugiat ducimus consequatur incidunt?</p>
                     <p class="section__subtitle">Voluptatibus, soluta blanditiis! Incidunt ea unde itaque illo molestiae eligendi sint culpa nobis voluptas sapiente voluptate, magnam ipsum eius earum?</p>
-                    
                 </div>
-                <div class="buttons-container">
-                    <button class="btn transparent-effect" role="button">Know More</button>
-                    <button class="btn" role="button">See My Work</button>
-                </div>
+                
             </div>
             <div class="section__image">
                 <img src="./img/portfolio-01.jpg" alt="a picture of Jane Smith smiling" class="intro__img">
-                <div class="theme-overlay">
-                    <div class="color-overlay"></div>
-                    <img src="./img/my_bcl_pic.jpg" alt="a picture of Jane Smith smiling" class="intro__img2">
+                <div class="buttons-container">
+                    <button id="viewItem" class="btn" href="#item-viewer" role="button">
+                        <svg width="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M16.325 14.899l5.38 5.38a1.008 1.008 0 0 1-1.427 1.426l-5.38-5.38a8 8 0 1 1 1.426-1.426zM10 16a6 6 0 1 0 0-12a6 6 0 0 0 0 12zm3-5h-2v2a1 1 0 0 1-2 0v-2H7a1 1 0 0 1 0-2h2V7a1 1 0 1 1 2 0v2h2a1 1 0 0 1 0 2z" fill="currentColor" fill-rule="evenodd"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>
-        
 
-        <section class="intro">
-            <h1 class="section__title section__title--intro">
-                The title <strong>of my project</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">A short subtitle</p>
-            <img src="./img/portfolio-01.jpg" alt="" class="intro__img">
-
-            <div class="portfolio-item-individual">
-                
-                <img src="img/portfolio-details.jpg" alt="">
-                
+        <section class="site-view hide" id="item-viewer">
+            <div class="section-container">
+               
             </div>
         </section>
-
-        <!-- <div class="thumbnail-container">
-            <div class="thumbnail">
-                <iframe src="https://ir532keeplist.netlify.app/" frameborder="0" onload="this.style.opacity = 1"></iframe>
-            </div>
-        </div> -->
-        
+        <!-- https://codepen.io/Innocent-Rangaka/full/QWopPpP -->
         
         <!-- Footer -->
         <footer class="footer">
@@ -132,7 +116,7 @@
         </footer>
         
         
-        <script src="js/index.js"></script>
+        <script src="./assets/js/index.js"></script>
         
     </body>
 </html>
