@@ -1,3 +1,9 @@
+(function () {
+    const portfolioName = document.querySelector(".porfolio-name");
+    portfolioName.textContent += ` W: ${window.innerWidth} | H: ${window.innerHeight}`;
+    console.log(window.innerHeight);
+})();
+
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link')
 const portfolioItems = document.querySelectorAll('.portfolio > .portfolio__item');
