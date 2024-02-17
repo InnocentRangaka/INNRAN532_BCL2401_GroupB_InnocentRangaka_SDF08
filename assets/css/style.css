@@ -30,7 +30,9 @@
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
     --section-padding-left-right: 5%;
-    --section-padding: 8.924% var(--section-padding-left-right) 5.95%;
+    --section-padding-top: 25vh;
+    --section-padding-bottom: 8.924%;
+    --section-padding: var(--section-padding-top) var(--section-padding-left-right) var(--section-padding-bottom);
 
     --custom-red-hue: 30deg;
     
@@ -1256,7 +1258,9 @@ transition: all 300ms ease-in-out;
         --fs-h4: calc(var(--fs-body) * 1.0625);
         --fs-btn: calc(var(--fs-body) * .6875);
         --icon-svg-size: 16px;
-        --section-padding: 40% var(--section-padding-left-right) 40%;
+        --section-padding-top: 25vh;
+        --section-padding-bottom: 18.325vh;
+        --section-padding: var(--section-padding-top) var(--section-padding-left-right) var(--section-padding-bottom);
 
     }
 
@@ -1269,6 +1273,22 @@ transition: all 300ms ease-in-out;
         justify-content: space-between;
     }
 
+    .nav-toggle {
+        padding: .5em;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 1em;
+        z-index: 1000;
+        right: 5%;
+    }
+
+    .nav-open .nav-toggle {
+        top: -1px;
+        right: -8px;
+    }
+
     .intro {
         grid-template-areas: "text" "image";
         grid-template-columns: 1fr;
@@ -1279,6 +1299,10 @@ transition: all 300ms ease-in-out;
         display: block;
         width: 90%;
         padding: 0;
+    }
+
+    h1.section__title.section__title--intro {
+        left: 0;
     }
 
     .section__subtitle--intro span {
@@ -1299,7 +1323,7 @@ transition: all 300ms ease-in-out;
         position: relative;
         top: 50px;
         max-width: 100%; /* max-width: calc(var(--iw-intro) * 2.1189); */
-        max-height: calc(var(--iw-intro) * 2.1189); /* max-height: calc(var(--iw-intro) * 2.1189); */
+        min-height: calc(calc(var(--iw-intro) * 2.1189) + 1px); /* max-height: calc(var(--iw-intro) * 2.1189); */
         overflow: hidden;
     }
 
@@ -1342,21 +1366,16 @@ transition: all 300ms ease-in-out;
 
     .buttons-container {
         top: 5px;
+        gap: 8px;
     }
 
-    .nav-toggle {
-        padding: .5em;
-        background: transparent;
-        border: 0;
-        cursor: pointer;
-        position: absolute;
-        top: 1em;
-        z-index: 1000;
-        right: 5%;
+    .my-services .section-container {
+        max-width: 100%;
+        margin: 0;
     }
 
-    .nav-open .nav-toggle {
-        top: -1px;
-        right: -8px;
+    .services {
+        margin-top: 3.125em;
+        margin-bottom: 3.125em;
     }
 }
