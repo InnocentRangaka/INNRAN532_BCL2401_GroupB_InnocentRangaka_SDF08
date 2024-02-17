@@ -22,33 +22,34 @@
     --clr-dark-rgb: 48,48,48;
     --clr-accent: #FF0000;
     --clr-lighter: #ffffff;
-
-    --dots-color: #a1a1a1;
+    --dots-color: #e1e1e1;
+    --dots-color-grey: #a1a1a1;
     --dots-color-dark: #000000;
     --dots-bg-color: #ffffff00;
     
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
     --section-padding-left-right: 5%;
-    --section-padding: 150px var(--section-padding-left-right) 100px;
-
-    --btn-padding: .625rem 1.25rem;
+    --section-padding: 8.924% var(--section-padding-left-right) 5.95%;
 
     --custom-red-hue: 30deg;
     
-    --fs-body: 1rem;
-    --fs-h1: calc(var(--fs-body) + 3vw);
-    --fs-h2: calc(var(--fs-body) + 2.75vw);
-    --fs-h3: calc(var(--fs-body) + 1vw);
-    --fs-h4: calc(var(--fs-body) + .5vw);
-    --fs-btn: calc(var(--fs-body) * .625);
+    --fs-body: 16px;
+    --fs-h1: calc(var(--fs-body) * 4.57);
+    --fs-h2: calc(var(--fs-body) * 2.75);
+    --fs-h3: calc(var(--fs-body) * 2);
+    --fs-h4: calc(var(--fs-body) * 1.5);
+    --fs-btn: calc(var(--fs-body) * .875);
 
-    --iw-intro: 36872vw;
+    --btn-padding: .625rem 1.25rem;
+
+    --iw-intro: 36.872vw;
     --iw-intro2: calc(var(--iw-intro) * .5);
+    --icon-svg-size: var(--fs-h4);
 }
 
 .fs-small {
-    font-size: var(--fs-h3);
+    font-size: calc(var(--fs-h4) * .82353);
 }
 
 /* General styles */
@@ -86,6 +87,8 @@ section {
     padding: 5em 2em;
     width: 100%;
     min-height: 100vh;
+    height: auto;
+    max-height: max-content;
     padding: var(--section-padding);
     box-sizing: border-box;
     z-index: 0;
@@ -133,12 +136,12 @@ button,
     display: inline-block;
     background: var(--clr-dark);
     color: var(--clr-light);
-    width: max-content;
     height: auto;
+    min-height: 24px;
     max-height: 48px;
     text-decoration: none;
     cursor: pointer;
-    font-size: .9375rem;
+    font-size: var(--fs-btn);
     text-transform: capitalize;
     letter-spacing: 2px;
     font-weight: 600;
@@ -149,6 +152,7 @@ button,
 
 button,
 .btn, a.btn {
+    width: max-content;
     padding: var(--btn-padding);
     line-height: 1.2;
 }
@@ -267,6 +271,16 @@ h1.section__title.section__title--intro{
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
 }
+
+.section-svg{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3px;
+    gap: 5px;
+}
+
+
 
 /* header */
 
@@ -447,6 +461,14 @@ button:active .hamburger:after {
     box-shadow: var(--bs);
 }
 
+.section-svg svg{
+    width: var(--icon-svg-size);
+    height: var(--icon-svg-size);
+}
+.section-svg svg.bootstrap{
+    padding-top: 1px;
+}
+
 .section__subtitle--intro {
     display: inline-block;
 }
@@ -469,7 +491,13 @@ button:active .hamburger:after {
 .dots-overlay {
     background-color: var(--dots-bg-color);
     background-image: radial-gradient(var(--dots-color) 0.75px, var(--dots-bg-color) 0.75px), 
-                      radial-gradient(var(--dots-color) 0.75px, var(--dots-bg-color) 0.75px);
+    radial-gradient(var(--dots-color) 0.75px, var(--dots-bg-color) 0.75px);
+}
+
+.dots-overlay-grey {
+    background-color: var(--dots-bg-color);
+    background-image: radial-gradient(var(--dots-color-grey) 0.75px, var(--dots-bg-color) 0.75px), 
+                      radial-gradient(var(--dots-color-grey) 0.75px, var(--dots-bg-color) 0.75px);
 }
 
 .dots-overlay-dark {
@@ -501,9 +529,6 @@ button:active .hamburger:after {
 .blurred-overlay {
     filter: blur(5px);
 }
-
-
---iw-intro2
 
 .section__image {
     max-width: var(--iw-intro);
@@ -573,20 +598,6 @@ button:active .hamburger:after {
     content: "-";
 }
 
-
-@media (min-width: 600px) {
-    
-    /* .buttons-container{ grid-area: buttons-container; } */
-    
-    
-
-    /* .section__subtitle--intro svg {
-
-    } */
-}
-
-
-
 /*  My services section  */
 
 .my-services {
@@ -637,7 +648,7 @@ button:active .hamburger:after {
     color: var(--clr-accent)
 }
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
     .services {
         display: flex;
         /* max-width: 90%; */
@@ -742,39 +753,6 @@ button:active .hamburger:after {
     gap: 15px;
     margin-right: 25%;
     min-height: max-content;
-}
-
-@media (min-width: 600px) {
-    .about-me .section-container {
-        display: grid;
-        grid-template-columns: 1fr 250px;
-        grid-template-areas: 
-            "title img"
-            "subtitle img"
-            "text img";
-        grid-column-gap: 2em;
-        grid-row-gap: 1em;
-    }
-    
-    .section__title--about {
-        grid-area: title;
-    }
-    
-    .section__subtitle--about {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        position: relative;
-        left: -1em;
-        width: calc(100% + 2em);
-        padding-left: 1em;
-        padding-right: calc(200px + 4em);
-    }
-    
-    .about-me__img {
-        grid-area: img;
-        position: relative;
-        z-index: 0;
-    }
 }
 
 /* My Work */
@@ -1105,60 +1083,109 @@ transition: all 300ms ease-in-out;
 }
 
 /* Styles for screens larger than 1200px */
-@media screen and (min-width: 1200px) {
-    .container {
-        width: 80%;
-        margin: auto;
-    }
-    :root {
+@media only screen and (min-width: 1200px) {
+    /* :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-h3: 1.325rem;
         --fs-body: 1.125rem;
-    }
+    } */
 }
 
-@media (min-width: 800px) {
-    :root {
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    /* :root {
         --fs-h1: 4.3vw;
         --fs-h2: 2.25rem;
         --fs-h3: 1.25rem;
         --fs-h4: 1.0625rem;
         --fs-body: 1rem;
+    } */
+}
+
+@media only screen and (min-width: 668px) and (max-width: 768px) {
+
+    .contact-me .section-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "name"
+            "title"
+            "contacts"
+            "form";
     }
 }
 
 /* Styles for screens between 600px and 1200px */
-@media screen and (max-width: 600px) {
-    .container {
-        width: 90%;
-        margin: auto;
+@media only screen and (min-width: 426px) and (max-width: 667px) {
+
+    :root {
+        --section-padding: 20% var(--section-padding-left-right) 5.95%;
+        --btn-padding: 8px 16px;
+        --iw-intro: 50.625vw;
+        --fs-body: 16px;
+        --fs-h1: calc(var(--fs-body) * 1.5);
+        --fs-h2: calc(var(--fs-body) * 1.375);
+        --fs-h3: calc(var(--fs-body) * 1.1875);
+        --fs-h4: calc(var(--fs-body) * 1.0625);
+        --fs-btn: calc(var(--fs-body) * .6875);
+    }
+
+    .intro {
+        display: grid;
+        grid-template-areas: 
+        "text"
+        "image";
+        grid-template-columns: 1fr;
+        /* justify-content: space-between; */
+        z-index: 0;
+    }
+
+    h1.section__title.section__title--intro {
+        left: 0;
+    }
+
+    .section-svg{
+        gap: 3px;
+    }
+
+    .section-svg svg{
+        width: var(--icon-svg-size);
+    }
+
+    .section__text {
+        /* top: calc(1vh + 10%); */
+        top: 0;
+        min-height: 168px;
     }
 
     .section__image {
+        min-width: 162px;
         max-width: 100vw;
-        max-height: 626px;
-        /* overflow: hidden; */
+        /* max-height: var(--iw-intro); */
+        overflow: visible;
         border-radius: 20px;
-        right: 5%;
-        position: absolute;
-        top: calc(15vh + 10%);
+        right: 0;
+        position: relative;
+        top: 50px;
     }
 
     .intro__img {
         grid-area: image;
-        min-width: 250px;
-        max-width: 250px;
+        min-width: 162px;
+        max-width: var(--iw-intro);
         position: relative;
-        z-index: -2;
+        z-index: -1;
         border-radius: 20px;
+    }
+
+    .buttons-container {
+        top: 20px;
     }
 
     .theme-overlay {
         grid-area: img;
         min-width: 125px;
-        max-width: calc(125px * .5);
+        max-width: var(--iw-intro);
         position: absolute;
         top: calc(10vh + 10%);
         right: 33vw;
@@ -1170,27 +1197,73 @@ transition: all 300ms ease-in-out;
         position: relative;
         grid-area: img;
         min-width: 125px;
-        max-width: calc(125px * .5);
+        max-width: var(--iw-intro2);
         z-index: -1;
         border-radius: 20px;
         filter: grayscale(100%);
         z-index: -3;
     }
-}
 
-/* Styles for screens smaller than 600px */
-@media screen and (max-width: 599px) {
-    .container {
-        width: 100%;
-        padding: 10px;
+    .section__subtitle--intro {
+        display: block;
+    }
+
+    .section__subtitle--intro p {
+        display: inline-block;
+    }
+
+    .about-me .section-container {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+        grid-row-gap: 1em;
+    }
+    
+    .section__title--about {
+        grid-area: title;
+    }
+    
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+    
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 0;
     }
 }
 
 /* Styles for screens smaller than 600px */
-@media only screen and (max-width: 375px) {
-    .container {
-        width: 100%;
-        padding: 10px;
+@media only screen and (max-width: 480px) {
+    :root {
+        --section-padding: 25% var(--section-padding-left-right) 25%;
+    }
+}
+
+
+/* Styles for screens smaller than 600px */
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+    :root {
+        --fs-body: 16px;
+        --fs-h1: calc(var(--fs-body) * 1.5);
+        --fs-h2: calc(var(--fs-body) * 1.375);
+        --fs-h3: calc(var(--fs-body) * 1.1875);
+        --fs-h4: calc(var(--fs-body) * 1.0625);
+        --fs-btn: calc(var(--fs-body) * .6875);
+        --icon-svg-size: 16px;
+        --section-padding: 40% var(--section-padding-left-right) 40%;
+
     }
 
     header {
@@ -1199,8 +1272,6 @@ transition: all 300ms ease-in-out;
         width: 100%;
         top: 0;
         left: 0;
-        padding-left: var(--section-padding-left-right);
-        padding-right: var(--section-padding-left-right);
         justify-content: space-between;
     }
 
@@ -1210,6 +1281,17 @@ transition: all 300ms ease-in-out;
 
     .section__subtitle--intro p {
         margin-bottom: 10px;
+    }
+
+    .intro__img {
+        grid-area: unset;
+        min-width: 162px;
+        width: auto;
+        max-width: 198px;
+        position: relative;
+        right: 5%;
+        float: right;
+        z-index: -1;
     }
 
     .buttons-container {
