@@ -680,7 +680,6 @@ button:active .hamburger:after {
     height: 250px;
 }
 
-.about-me__img,
 .about-me__img img {
     box-shadow: var(--bs);
     border-radius: 50%;
@@ -1289,6 +1288,10 @@ transition: all 300ms ease-in-out;
         right: -8px;
     }
 
+    .section-container {
+        grid-row-gap: 1em;
+    }
+
     .intro {
         grid-template-areas: "text" "image";
         grid-template-columns: 1fr;
@@ -1316,7 +1319,7 @@ transition: all 300ms ease-in-out;
 
     .section__text {
         top: 0;
-        height: max-content;
+        min-height: max-content;
     }
 
     .section__image {
@@ -1375,7 +1378,99 @@ transition: all 300ms ease-in-out;
     }
 
     .services {
-        margin-top: 3.125em;
-        margin-bottom: 3.125em;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.1875em;
+        margin-bottom: 2.1875em;
+        gap: 15px;
+    }
+
+    .service {
+        max-width: 100%;
+    }
+
+    .section-info {
+        grid-row-gap: 2em;
+        gap: 15px;
+        margin-right: 0;
+    }
+
+    .about-me .about-me__body {
+        margin-top: 2.1875em;
+        margin-bottom: 0; /* 2.1875em; */
+    }
+
+    .about-me__img {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .about-me__img img {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        right: 0;
+    }
+
+    .about-me__img .about-me__img1 {
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        left: -60%;
+    }
+
+    .about-me__img .about-me__img2 {
+        display: block;
+        position: absolute;
+        width: 96px;
+        height: 96px;
+        left: 0;
+        bottom: 75px
+    }
+
+    .about-me__img .about-me__img3 {
+        position: relative;
+        width: 56px;
+        height: 56px;
+        top: 0;
+        left: 0;
+    }
+
+    .about-me p.section__subtitle--about span {
+        line-height: 1.4;
+    }
+
+    .about-me a.btn {
+        position: relative;
+        top: 10px;
+    }
+
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+    }
+
+    .contact-me .section-container {
+        display: flex;
+        grid-row-gap: 1em;
+        flex-direction: column;
+    }
+
+    .contact-me .d-grid {
+        /* display: flex;
+        flex-direction: column; */
+    }
+
+    .contact-me form fieldset {
+        display: grid;
+        padding: 30px 15px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .portfolio {
+        /* grid-template-columns: 1fr; */
     }
 }
