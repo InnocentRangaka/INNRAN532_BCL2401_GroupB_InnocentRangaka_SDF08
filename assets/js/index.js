@@ -1,9 +1,3 @@
-(function () {
-    const portfolioName = document.querySelector(".porfolio-name");
-    portfolioName.textContent += ` W: ${window.innerWidth} | H: ${window.innerHeight}`;
-    console.log(window.innerHeight);
-})();
-
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link')
 const portfolioItems = document.querySelectorAll('.portfolio > .portfolio__item');
@@ -46,10 +40,13 @@ portfolioItems.forEach(item => {
         itemImage.alt = `${itemName} image`;
     }
 
+    if(itemImage.getAttribute("aria-label") === null){
+        itemImage.setAttribute("aria-label", `${itemName} image`);
+    }
+
     item.addEventListener("mouseover", function(e){
         let itemTitle = item.querySelector("span.portfolio__title");
         itemTitle.setAttribute("style", "z-index:1; opacity:1");
-        console.log(itemImage.alt.length)
     });
 
     item.addEventListener("mouseleave", function(e){
