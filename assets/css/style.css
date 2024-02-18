@@ -1458,9 +1458,8 @@ transition: all 300ms ease-in-out;
         flex-direction: column;
     }
 
-    .contact-me .d-grid {
-        /* display: flex;
-        flex-direction: column; */
+    .contact-me .section-container form {
+        grid-area: unset;
     }
 
     .contact-me form fieldset {
