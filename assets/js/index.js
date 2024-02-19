@@ -142,6 +142,7 @@ function viewPortfolioItem(){
         }, 3500);
     }
 }
+viewPortfolioItem();
 
 // Immediately invoke the function
 (function () {
