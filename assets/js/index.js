@@ -73,6 +73,8 @@ portfolioItems.forEach(item => {
 const getUrl = window.location.href;
 const getUrlPath = window.location.pathname.replace("/","");
 const getUrlParams = window.location.search.replace("?","");
+
+console.log(getUrlPath);
 // View item button functionality
 const viewItemBtn = document.querySelector("button#viewItem");
 
@@ -90,7 +92,7 @@ if(viewItemBtn !== null && viewItemBtn !== undefined){
 
 function viewPortfolioItem(){
 
-// Check if URL path leads to a portfolio item page
+    // Check if URL path leads to a portfolio item page
     if(getUrlPath === "portfolio-item.html"){
         // Extract tag and URL from query parameters
         let slitParams = getUrlParams.split("=");
@@ -142,6 +144,7 @@ function viewPortfolioItem(){
         }, 3500);
     }
 }
+
 viewPortfolioItem();
 
 // Immediately invoke the function
