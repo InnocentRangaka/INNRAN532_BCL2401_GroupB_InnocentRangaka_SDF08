@@ -934,6 +934,25 @@ button:active .hamburger:after {
     transition: all 300ms ease-in-out;
 }
 
+.loading {
+    animation-name: slideShadow;
+    animation-duration: 1s;
+    animation-direction: forward;
+    animation-iteration-count: infinite;
+    animation-timing-function: easy;
+}
+
+@keyframes slideShadow {
+    from {
+      color: #fff;
+      box-shadow: inset 100vw 0 0 0 #000;
+    }
+    to {
+      box-shadow: inset -100vw 0 0 0 #ededed;
+      color:#000;
+    }
+  }
+
 .site-view {
     height: max-content;
 }

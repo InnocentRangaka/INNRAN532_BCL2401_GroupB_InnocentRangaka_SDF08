@@ -64,6 +64,7 @@ if(viewItemBtn !== null && viewItemBtn !== undefined){
     viewItemBtn.addEventListener("click", function(){
         let showItem = document.querySelector(".site-view");
         showItem.classList.remove("hide");
+        showItem.querySelector(".section-container").classList.add("loading");
 
         viewPortfolioItem();
 
