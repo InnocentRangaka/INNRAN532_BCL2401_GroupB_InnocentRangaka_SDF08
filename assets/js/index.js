@@ -15,11 +15,23 @@ navLinks.forEach(link => {
     })
 });
 
+
+// Looping through Portfolio Items
 portfolioItems.forEach(item => {
+    // Get the image element and extracting Image Information
     let itemImage = item.querySelector("img");
     let itemSrc = itemImage.src;
-    let fName = itemSrc.split("/").pop().split(".")[0];
+
+    // Processing Filename and creating Title:
+    // separates the URL path into an array.
+    // gets the last element (filename).
+    // gets the filename before the .extension.
+    // replaces hyphens and underscores with spaces.
+    // created element with classes for styling and appended to the item.
+    let fName = itemSrc.split("/").pop().split(".")[0]; 
     let name = fName.replace("-", " ").replace("_", " ");
+
+     // Create a title element and append it to the item
     let createSpan = document.createElement("span");
     createSpan.classList.add("portfolio__title");
     createSpan.classList.add("text-shadow-dark");
@@ -27,8 +39,11 @@ portfolioItems.forEach(item => {
     createSpan.textContent = itemName;
     item.appendChild(createSpan);
 
-    let fNameToLowerCase = fName.toLocaleLowerCase();
-
+    // Set href based on filename content:
+    // converts the filename to lowercase for conditional checks.
+    // Modifying Links Based on Filename.
+    let fNameToLowerCase = fName.toLocaleLowerCase(); 
+    
     if(fNameToLowerCase.includes("sdf")){
         item.href = `${item.href}?iframe=${item.getAttribute("data-view-path")};fname=${itemSrc.split("/").pop()}`;
     }
@@ -36,6 +51,7 @@ portfolioItems.forEach(item => {
         item.href = item.href + '?img=' + itemSrc.split("/").pop();
     }
 
+    // Add alt text and aria-label to image
     if(itemImage.alt.length === 0){
         itemImage.alt = `${itemName} image`;
     }
@@ -44,6 +60,8 @@ portfolioItems.forEach(item => {
         itemImage.setAttribute("aria-label", `${itemName} image`);
     }
 
+    // Implementing Hover Effect for Titles:
+    // These event listeners handle mouseover and mouseleave events on each item
     item.addEventListener("mouseover", function(e){
         let itemTitle = item.querySelector("span.portfolio__title");
         itemTitle.setAttribute("style", "z-index:1; opacity:1");
@@ -58,7 +76,9 @@ portfolioItems.forEach(item => {
 const getUrl = window.location.href;
 const getUrlPath = window.location.pathname.replace("/","");
 const getUrlParams = window.location.search.replace("?","");
-let viewItemBtn = document.querySelector("button#viewItem");
+
+// View item button functionality
+const viewItemBtn = document.querySelector("button#viewItem");
 
 if(viewItemBtn !== null && viewItemBtn !== undefined){
     viewItemBtn.addEventListener("click", function(){
@@ -68,52 +88,70 @@ if(viewItemBtn !== null && viewItemBtn !== undefined){
 
         viewPortfolioItem();
 
-        showItem.scrollIntoView(true);
+        showItem.scrollIntoView(true); // Add smooth scrolling
     });
 }
 
-function viewPortfolioItem(){
-    if(getUrlPath === "portfolio-item.html"){
-        let slitParams = getUrlParams.split("=");
-        let tagName = slitParams[0];
-        let getUrl = (tagName === "iframe")? slitParams[1].split(";")[0] : slitParams[1];
-        let fpath = (tagName === "iframe")? slitParams[2] : getUrl;
-        let name = '';
-        let itemViewer = document.querySelector(".site-view > .section-container");
-    
-        if(tagName === "iframe"){
-            let createIframe = document.createElement("iframe");
-            createIframe.id = "itemViewer";
-            createIframe.src = getUrl;
-            createIframe.setAttribute("frameborder", 0);
-            createIframe.setAttribute("onload", "this.style.opacity = 1");
-            createIframe.loading = "lazy";
-            
-            itemViewer.innerHTML = createIframe.outerHTML;
-            name = fpath.replace("-", " ").replace("_", " ");
+function viewPortfolioItem() {
+    // Check if URL path leads to a portfolio item page
+    if (getUrlPath === "portfolio-item.html") {
+        // Extract tag and URL from query parameters
+        const urlParams = getUrlParams.split("=");
+        const tagName = urlParams[0];
+        const url = tagName === "iframe" ? urlParams[1].split(";")[0] : urlParams[1];
+        const filePath = tagName === "iframe" ? urlParams[2] : url;
 
+        // Initialize variables
+        let name = "";
+        const itemViewer = document.querySelector(".site-view > .section-container");
+
+        // Handle iframe scenario
+        if (tagName === "iframe") {
+        const iframe = document.createElement("iframe");
+        iframe.id = "itemViewer";
+        iframe.src = url;
+        iframe.frameborder = 0;
+        iframe.onload = () => {
+            iframe.style.opacity = 1;
+        };
+        iframe.loading = "lazy";
+
+        itemViewer.innerHTML = iframe.outerHTML;
+        name = filePath.replace("-", " ").replace("_", " ");
         }
-        if(tagName === "img"){
-            let createImg = document.createElement("img");
-            createImg.src = `./${tagName}/${getUrl}`;
-            let fName = getUrl.split("/").pop().split(".")[0];
-            name = fName.replace("-", " ").replace("_", " ");
-            if(createImg.alt.length === 0){
-                createImg.alt = `${name} image`;
-            }
-            createImg.setAttribute("onload", "this.style.opacity = 1");
-    
-            itemViewer.innerHTML = createImg.outerHTML;
+
+        // Handle image scenario
+        else if (tagName === "img") {
+        const img = document.createElement("img");
+        img.src = `./${tagName}/${url}`;
+        const fileName = url.split("/").pop().split(".")[0];
+        name = fileName.replace("-", " ").replace("_", " ");
+        if (img.alt.length === 0) {
+            img.alt = `${name} image`;
         }
-    
-        headerImg = document.querySelector(".section__image > img");
-        headerImg.src = `./img/${fpath}`;
+        img.onload = () => {
+            img.style.opacity = 1;
+        };
+
+        itemViewer.innerHTML = img.outerHTML;
+        }
+
+        // Update header image
+        const headerImg = document.querySelector(".section__image > img");
+        headerImg.src = `./img/${filePath}`;
         headerImg.alt = `${name} image`;
-        headerImg.setAttribute("style", "border-radius: 20px");
-        
+        headerImg.style.borderRadius = "20px";
+
+        // Remove loading class after 3.5 seconds
         setTimeout(() => {
-            document.querySelector(".site-view .section-container").classList.remove("loading");
+        document.querySelector(".site-view .section-container").classList.remove("loading");
         }, 3500);
     }
 }
+  
+// Immediately invoke the function
+(function () {
+    viewPortfolioItem();
+})();
+  
 

@@ -1,3 +1,4 @@
+/* Reset all default styles */
 *,
 *::before,
 *::after {
@@ -9,6 +10,7 @@
     box-sizing: border-box;
 }
 
+/* Define global variables */
 :root {
     --ff-primary: 'Montserrat', sans-serif;
     --ff-secondary: var(--ff-primary);
@@ -43,6 +45,7 @@
     --icon-svg-size: var(--fs-h4);
 }
 
+/* Styles for small text */
 .fs-small {
     font-size: calc(var(--fs-h4) * .82353);
 }
@@ -193,6 +196,8 @@ h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
+/* Section styles */
+
 .section-bg {
     background-color: var(--clr-lighter);
 }
@@ -314,6 +319,7 @@ header .logo-side .porfolio-name {
     color: var(--clr-dark)
 }
 
+/* Navigations styles */
 .nav {
     position: fixed;
     background: var(--clr-light);
@@ -468,6 +474,7 @@ button:active .hamburger:after {
     z-index: -1;
 }
 
+/* Overlay styles */
 .dots-overlay {
     background-color: var(--dots-bg-color);
     background-image: radial-gradient(var(--dots-color) 0.75px, var(--dots-bg-color) 0.75px), 
@@ -620,6 +627,7 @@ button:active .hamburger:after {
     max-width: 90%;
 }
 
+/* About Me styles */
 .section-container,
 .about-me {
     margin: 0 auto;
@@ -762,6 +770,7 @@ button:active .hamburger:after {
     transform: scale(1.2);
 }
 
+/* Contact Me styles */
 .contact-me {
     position: relative;
     box-sizing: border-box;
@@ -879,6 +888,7 @@ button:active .hamburger:after {
     text-decoration: underline;
 }
 
+/* Social Media styles */
 .social-list {
     list-style: none;
     display: flex;
@@ -900,6 +910,7 @@ button:active .hamburger:after {
     display: flex;
 }
 
+/* Item View Frame styles */
 .thumbnail iframe {
     width: 1440px;
     height: 900px;
@@ -934,6 +945,7 @@ button:active .hamburger:after {
     transition: all 300ms ease-in-out;
 }
 
+/* iFrame Loading effect styles */
 .loading {
     animation-name: slideShadow;
     animation-duration: 1s;
@@ -951,7 +963,7 @@ button:active .hamburger:after {
       box-shadow: inset -100vw 0 0 0 #ededed;
       color:#000;
     }
-  }
+}
 
 .site-view {
     height: max-content;
