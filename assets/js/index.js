@@ -119,7 +119,7 @@ function viewPortfolioItem(){
         // Handle image scenario
         if(tagName === "img"){
             let createImg = document.createElement("img");
-            createImg.src = `./${tagName}/${getUrl}`;
+            createImg.src = `./assets/${tagName}/${getUrl}`;
             let fName = getUrl.split("/").pop().split(".")[0];
             name = fName.replace("-", " ").replace("_", " ");
             if(createImg.alt.length === 0){
@@ -128,7 +128,6 @@ function viewPortfolioItem(){
             createImg.setAttribute("onload", "this.style.opacity = 1");
     
             itemViewer.innerHTML = createImg.outerHTML;
-            console.log(createImg.src);
         }
     
         // Update header image
