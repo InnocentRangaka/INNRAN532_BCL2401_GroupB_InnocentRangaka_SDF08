@@ -145,8 +145,6 @@ function viewPortfolioItem(){
     }
 }
 
-viewPortfolioItem();
-
 // Immediately invoke the function
 (function () {
     viewPortfolioItem();
