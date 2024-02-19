@@ -1908,8 +1908,8 @@ button:active .hamburger:after {
 
     .intro__img2 {
         position: relative;
-        min-width: calc(var(--iw-intro2) * 1.661152); /* 125px */
-        max-width: calc(var(--iw-intro2) * 1.661152); /* for 150px = calc(var(--iw-intro2) *2.54258) */
+        min-width: calc(var(--iw-intro2) * 2.11881); /* 125px */
+        max-width: calc(var(--iw-intro2) * 2.11881); /* for 150px = calc(var(--iw-intro2) *2.54258) */
         border-radius: 20px;
         filter: grayscale(100%);
         z-index: -3;
@@ -1918,8 +1918,8 @@ button:active .hamburger:after {
     .color-overlay {
         display: block;
         position: absolute;
-        min-width: calc(var(--iw-intro2) * 1.661152);
-        max-width: calc(var(--iw-intro2) * 1.661152);
+        min-width: calc(var(--iw-intro2) * 2.11881);
+        max-width: calc(var(--iw-intro2) * 2.11881);
     }
 
     .buttons-container {
