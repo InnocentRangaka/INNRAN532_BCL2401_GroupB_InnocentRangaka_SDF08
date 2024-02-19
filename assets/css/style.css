@@ -1879,6 +1879,7 @@ button:active .hamburger:after {
     .section__image {
         position: relative;
         top: 50px;
+        right: 0;
         max-width: 100%; /* max-width: calc(var(--iw-intro) * 2.1189); */
         min-height: calc(calc(var(--iw-intro) * 2.1189) + 1px); /* max-height: calc(var(--iw-intro) * 2.1189); */
         overflow: hidden;
@@ -1899,16 +1900,16 @@ button:active .hamburger:after {
         min-width: calc(var(--iw-intro2) * 1.661152); /* 98px */
         max-width: calc(var(--iw-intro2) * 1.661152); /* for 125px = calc(var(--iw-intro2) *2.11881); | for 150px = calc(var(--iw-intro2) *2.54258) */
         position: absolute;
-        top: 35px;/* top: 45vh; */
-        left: 0;
+        top: 15px;
+        left: 20px;
         z-index: -1;
         border-radius: 20px;
     }
 
     .intro__img2 {
         position: relative;
-        min-width: calc(var(--iw-intro2) *2.11881); /* 125px */
-        max-width: calc(var(--iw-intro2) *2.11881); /* for 150px = calc(var(--iw-intro2) *2.54258) */
+        min-width: calc(var(--iw-intro2) * 1.661152); /* 125px */
+        max-width: calc(var(--iw-intro2) * 1.661152); /* for 150px = calc(var(--iw-intro2) *2.54258) */
         border-radius: 20px;
         filter: grayscale(100%);
         z-index: -3;
@@ -1917,8 +1918,8 @@ button:active .hamburger:after {
     .color-overlay {
         display: block;
         position: absolute;
-        min-width: calc(var(--iw-intro2) *2.11881);
-        max-width: calc(var(--iw-intro2) *2.11881);
+        min-width: calc(var(--iw-intro2) * 1.661152);
+        max-width: calc(var(--iw-intro2) * 1.661152);
     }
 
     .buttons-container {
@@ -1976,6 +1977,7 @@ button:active .hamburger:after {
         position: absolute;
         width: 96px;
         height: 96px;
+        top: 40%;
         left: 0;
         bottom: 75px
     }
