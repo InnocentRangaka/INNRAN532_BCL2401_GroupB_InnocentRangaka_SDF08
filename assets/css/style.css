@@ -435,10 +435,6 @@ button:active .hamburger:after {
     box-sizing: border-box;
 }
 
-.intro .section__text {
-    top: 25vh;
-}
-
 .section__text {
     position: relative;
     height: max-content;
@@ -1057,6 +1053,14 @@ button:active .hamburger:after {
     display: none;
     -webkit-transition: display .3s;
     transition: display .3s;
+}
+
+/* Styles for screens smaller than 1441px */
+@media screen and (min-width: 1442px) {
+
+    .intro .section__text {
+        top: 25vh;
+    }
 }
 
 /* Styles for screens smaller than 1441px */
@@ -1942,6 +1946,11 @@ button:active .hamburger:after {
         grid-row-gap: 2em;
         gap: 15px;
         margin-right: 0;
+    }
+    
+    .about-me .section-container {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .about-me .about-me__body {
