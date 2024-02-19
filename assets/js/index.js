@@ -127,6 +127,7 @@ function viewPortfolioItem(){
             createImg.setAttribute("onload", "this.style.opacity = 1");
     
             itemViewer.innerHTML = createImg.outerHTML;
+            console.log(createImg.src);
         }
     
         // Update header image
@@ -145,6 +146,5 @@ function viewPortfolioItem(){
 // Immediately invoke the function
 (function () {
     viewPortfolioItem();
-    console.log("hello")
 }());
 
