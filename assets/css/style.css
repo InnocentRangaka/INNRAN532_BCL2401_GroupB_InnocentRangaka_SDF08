@@ -1740,6 +1740,7 @@ button:active .hamburger:after {
 
     .about-me__img {
         width: 100%;
+        top: 0;
         padding-bottom: 20px;
     }
 
