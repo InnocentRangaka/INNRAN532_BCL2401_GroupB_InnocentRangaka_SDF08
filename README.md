@@ -1,21 +1,40 @@
-# cNq83aTN
+# INNRAN532_BCL2401_GroupB_InnocentRangaka_SDF08
 
-Quick start:
+# MiPortfolio: Front-End Developer Portfolio 
 
-```
-$ npm install
-$ npm start
-````
+This project holds the source code for MiPortfolio, a new front-end developer's responsive portfolio website built using HTML, CSS, and JavaScript, showcasing my skills and selected projects. 
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+## Note 
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+The first 3 portfolio items are my previous projects and all other protfolio items are placeholder images.
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## Overview:
 
-Happy Coding!
+* Built with HTML, CSS, and JavaScript.
+* Responsive design ensures smooth viewing on all devices.
+* Clean and intuitive navigation.
+* Sections highlighting services, about me, portfolio, and contact information.
+
+## Features:
+
+* Responsive design for optimal viewing on all devices
+* Clean and user-friendly interface
+* Visual representation of skills and experience
+* Interactive elements to showcase your work
+* Clear navigation to different sections
+* Contact form for easy communication
+* Social media links for following me
+
+## Technologies Used:
+
+* Front-end: 
+    - HTML5: The foundation of the website structure.
+    - CSS3: For styling, layout and animation.
+    - JavaScript: Used for interactive elements.
+
+* Deployment:
+    - Netlify: Hosting platform for the website.
+
+
+
+veiw MiPortfolio at https://innran532miportfolio.netlify.app/
