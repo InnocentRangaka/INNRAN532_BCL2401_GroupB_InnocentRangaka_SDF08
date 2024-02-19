@@ -993,10 +993,6 @@ button:active .hamburger:after {
     z-index: 0;
 }
 
-.intro.portfolio-item-details .section__text {
-    top: calc(1vh + 10%);
-}
-
 .intro.portfolio-item-details .section__subtitle--intro {
     display: block;
     position: relative;
@@ -1061,6 +1057,9 @@ button:active .hamburger:after {
 
     .intro .section__text {
         top: 25vh;
+    }
+    .intro.portfolio-item-details .section__text {
+        top: calc(1vh + 10%);
     }
 }
 
@@ -1582,6 +1581,11 @@ button:active .hamburger:after {
 
     .intro.portfolio-item-details .buttons-container {
         top: 150px;
+    }
+
+    .intro.portfolio-item-details {
+        grid-template-areas: "text" "image";
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

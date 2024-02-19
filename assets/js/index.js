@@ -112,6 +112,7 @@ function viewPortfolioItem(){
             createIframe.setAttribute("frameborder", 0);
             createIframe.setAttribute("onload", "this.style.opacity = 1");
             createIframe.loading = "lazy";
+            createIframe.width = itemViewer.offsetWidth;
             
             itemViewer.innerHTML = createIframe.outerHTML;
             name = fpath.replace("-", " ").replace("_", " ");
@@ -127,10 +128,13 @@ function viewPortfolioItem(){
                 createImg.alt = `${name} image`;
             }
             createImg.setAttribute("onload", "this.style.opacity = 1");
-    
+            createIframe.width = itemViewer.offsetWidth;
+            
             itemViewer.innerHTML = createImg.outerHTML;
             isLoading = true;
         }
+
+        console.log();
 
         if(isLoading){
             let createP = document.createElement("p");
