@@ -145,5 +145,6 @@ function viewPortfolioItem(){
 // Immediately invoke the function
 (function () {
     viewPortfolioItem();
+    console.log("hello")
 }());
 
