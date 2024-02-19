@@ -1805,7 +1805,10 @@ button:active .hamburger:after {
         padding: 30px 15px;
     }
 
-    
+    .intro.portfolio-item-details {
+        grid-template-areas: "text" "image";
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 /* Styles for screens smaller than 425px */
@@ -2025,6 +2028,11 @@ button:active .hamburger:after {
     .contact-me form fieldset {
         display: grid;
         padding: 30px 15px;
+    }
+
+    .intro.portfolio-item-details {
+        grid-template-areas: "text" "image";
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .intro.portfolio-item-details .section__image {
