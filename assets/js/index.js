@@ -74,7 +74,6 @@ const getUrl = window.location.href;
 const getUrlPath = window.location.pathname.replace("/","");
 const getUrlParams = window.location.search.replace("?","");
 
-console.log(getUrlPath);
 // View item button functionality
 const viewItemBtn = document.querySelector("button#viewItem");
 
