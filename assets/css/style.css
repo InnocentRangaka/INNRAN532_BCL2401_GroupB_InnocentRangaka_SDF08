@@ -1881,7 +1881,7 @@ button:active .hamburger:after {
         top: 50px;
         right: 0;
         max-width: 100%; /* max-width: calc(var(--iw-intro) * 2.1189); */
-        min-height: calc(calc(var(--iw-intro) * 2.1189) + 1px); /* max-height: calc(var(--iw-intro) * 2.1189); */
+        min-height: calc(var(--iw-intro) * 1.4189); /* calc(calc(var(--iw-intro) * 2.1189) + 1px); */ /* max-height: calc(var(--iw-intro) * 2.1189); */
         overflow: hidden;
     }
 
