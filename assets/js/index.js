@@ -93,7 +93,7 @@ if(viewItemBtn !== null && viewItemBtn !== undefined){
 function viewPortfolioItem(){
 
     // Check if URL path leads to a portfolio item page
-    if(getUrlPath === "portfolio-item.html"){
+    if(getUrlPath === "portfolio-item.html" || getUrlPath === "portfolio-item"){
         // Extract tag and URL from query parameters
         let slitParams = getUrlParams.split("=");
         let tagName = slitParams[0];
