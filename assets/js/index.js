@@ -102,6 +102,7 @@ function viewPortfolioItem(){
         // Initialize variables
         let name = '';
         let itemViewer = document.querySelector(".site-view > .section-container");
+        let isLoading = false;
         
         // Handle iframe scenario
         if(tagName === "iframe"){
@@ -114,7 +115,7 @@ function viewPortfolioItem(){
             
             itemViewer.innerHTML = createIframe.outerHTML;
             name = fpath.replace("-", " ").replace("_", " ");
-
+            isLoading = true;
         }
         // Handle image scenario
         if(tagName === "img"){
@@ -128,6 +129,14 @@ function viewPortfolioItem(){
             createImg.setAttribute("onload", "this.style.opacity = 1");
     
             itemViewer.innerHTML = createImg.outerHTML;
+            isLoading = true;
+        }
+
+        if(isLoading){
+            let createP = document.createElement("p");
+            createP.classList.add("fs-small");
+            createP.textContent = "If the Item is not visible, click zoom button again.";
+            itemViewer.appendChild(createP);
         }
     
         // Update header image
