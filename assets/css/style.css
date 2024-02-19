@@ -1740,7 +1740,7 @@ button:active .hamburger:after {
 
     .about-me__img {
         width: 100%;
-        top: 0;
+        top: 15%;
         padding-bottom: 20px;
     }
 
@@ -1748,6 +1748,7 @@ button:active .hamburger:after {
         position: absolute;
         width: 150px;
         height: 150px;
+        top: 35%;
         right: 0;
     }
 
@@ -1756,8 +1757,9 @@ button:active .hamburger:after {
         position: absolute;
         width: 96px;
         height: 96px;
-        left: 30vw;
-        bottom: 75px
+        top: 90%;
+        left: 20%;
+        bottom: 75px;
     }
 
     .about-me__img .about-me__img3 {
