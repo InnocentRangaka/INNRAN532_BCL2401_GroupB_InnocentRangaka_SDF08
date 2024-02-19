@@ -1890,7 +1890,7 @@ button:active .hamburger:after {
         width: auto;
         max-width: 198px;
         position: relative;
-        right: 5%;
+        right: 3.5%;
         float: right;
         border-radius: 20px;
         z-index: -1;
@@ -1900,8 +1900,8 @@ button:active .hamburger:after {
         min-width: calc(var(--iw-intro2) * 1.661152); /* 98px */
         max-width: calc(var(--iw-intro2) * 1.661152); /* for 125px = calc(var(--iw-intro2) *2.11881); | for 150px = calc(var(--iw-intro2) *2.54258) */
         position: absolute;
-        top: 15px;
-        left: 20px;
+        top: 20px;
+        left: 4.5%;
         z-index: -1;
         border-radius: 20px;
     }
