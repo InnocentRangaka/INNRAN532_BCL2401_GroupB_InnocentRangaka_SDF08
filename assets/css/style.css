@@ -1319,7 +1319,7 @@ button:active .hamburger:after {
 }
 
 /* Styles for screens smaller than 993px */
-@media screen and (max-width: 993px) {
+@media screen and (min-width: 770px) and (max-width: 993px) {
     :root {
         --fs-body: 16px;
         --fs-h1: calc(var(--fs-body) * 2.895);
@@ -1585,7 +1585,7 @@ button:active .hamburger:after {
 }
 
 /* Styles for screens smaller than 768px */
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 427px) and (max-width: 769px) {
     :root {
         --fs-body: 16px;
         --fs-h1: calc(var(--fs-body) * 2.625);
@@ -1947,7 +1947,7 @@ button:active .hamburger:after {
         gap: 15px;
         margin-right: 0;
     }
-    
+
     .about-me .section-container {
         display: grid;
         grid-template-columns: 1fr;
