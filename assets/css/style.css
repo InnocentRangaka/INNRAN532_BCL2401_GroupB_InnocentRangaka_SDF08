@@ -1314,6 +1314,7 @@ button:active .hamburger:after {
     .intro.portfolio-item-details .buttons-container {
         top: 40%;
         left: 40%;
+        margin: 0 auto;
     }
 
 }
@@ -1809,6 +1810,10 @@ button:active .hamburger:after {
         grid-template-areas: "text" "image";
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .portfolio-item-details .intro__img {
+        max-width: 250px;
+    }
 }
 
 /* Styles for screens smaller than 425px */
@@ -1892,7 +1897,7 @@ button:active .hamburger:after {
         right: 0;
         max-width: 100%; /* max-width: calc(var(--iw-intro) * 2.1189); */
         min-height: calc(var(--iw-intro) * 1.4189); /* calc(calc(var(--iw-intro) * 2.1189) + 1px); */ /* max-height: calc(var(--iw-intro) * 2.1189); */
-        overflow: hidden;
+        overflow: visible;
     }
 
     .intro__img {
@@ -2038,5 +2043,9 @@ button:active .hamburger:after {
     .intro.portfolio-item-details .section__image {
         top: 90px;
         left: 0.5%;
+    }
+
+    .portfolio-item-details .intro__img {
+        max-width: 250px;
     }
 }
