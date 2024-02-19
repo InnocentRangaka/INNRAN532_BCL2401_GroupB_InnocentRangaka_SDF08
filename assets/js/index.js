@@ -83,12 +83,15 @@ function viewPortfolioItem(){
     
         if(tagName === "iframe"){
             let createIframe = document.createElement("iframe");
+            createIframe.id = "itemViewer";
             createIframe.src = getUrl;
             createIframe.setAttribute("frameborder", 0);
             createIframe.setAttribute("onload", "this.style.opacity = 1");
-    
+            createIframe.loading = "lazy";
+            
             itemViewer.innerHTML = createIframe.outerHTML;
             name = fpath.replace("-", " ").replace("_", " ");
+
         }
         if(tagName === "img"){
             let createImg = document.createElement("img");
@@ -107,6 +110,10 @@ function viewPortfolioItem(){
         headerImg.src = `./img/${fpath}`;
         headerImg.alt = `${name} image`;
         headerImg.setAttribute("style", "border-radius: 20px");
+        
+        setTimeout(() => {
+            document.querySelector(".site-view .section-container").classList.remove("loading");
+        }, 3500);
     }
 }
 
