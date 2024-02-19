@@ -967,7 +967,8 @@ button:active .hamburger:after {
 .site-view iframe {
     width: 100%;
     min-height: max-content;
-    height: calc(100vh + 200px);
+    /* height: calc(100vh + 200px); */
+    height: auto;
 }
 
 .site-view img {

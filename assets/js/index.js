@@ -129,7 +129,8 @@ function viewPortfolioItem(){
             }
             createImg.setAttribute("onload", "this.style.opacity = 1");
             createIframe.width = itemViewer.offsetWidth;
-            
+            createIframe.height = itemViewer.offsetWidth;
+
             itemViewer.innerHTML = createImg.outerHTML;
             isLoading = true;
         }
