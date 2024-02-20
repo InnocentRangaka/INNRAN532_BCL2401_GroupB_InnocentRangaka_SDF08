@@ -140,8 +140,6 @@ function viewPortfolioItem(){
             isLoading = true;
         }
 
-        console.log();
-
         if(isLoading){
             let createP = document.createElement("p");
             createP.classList.add("fs-small");
