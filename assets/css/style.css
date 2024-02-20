@@ -1314,7 +1314,8 @@ button:active .hamburger:after {
 
     .intro.portfolio-item-details .buttons-container {
         top: 40%;
-        left: 40%;
+        left: auto;
+        right: auto;
         margin: 0 auto;
     }
 
