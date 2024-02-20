@@ -163,7 +163,7 @@ function viewPortfolioItem(){
         // Remove loading class after 3.5 seconds
         setTimeout(() => {
             document.querySelector(".site-view .section-container").classList.remove("loading");
-        }, 8000);
+        }, 20000);
     }
 }
 
