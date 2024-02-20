@@ -117,6 +117,13 @@ function viewPortfolioItem(){
             itemViewer.innerHTML = createIframe.outerHTML;
             name = fpath.replace("-", " ").replace("_", " ");
             isLoading = true;
+
+            const iframe = itemViewer.querySelector('iframe');
+
+            if(itemViewer.offsetWidth >= 1){
+                // createIframe.minHeight = '100%';
+                createIframe.height = iframe.contentWindow.document.body.offsetWidth;
+            }
         }
         // Handle image scenario
         if(tagName === "img"){
@@ -135,8 +142,6 @@ function viewPortfolioItem(){
             isLoading = true;
         }
 
-        console.log();
-
         if(isLoading){
             let createP = document.createElement("p");
             createP.classList.add("fs-small");
@@ -153,7 +158,7 @@ function viewPortfolioItem(){
         // Remove loading class after 3.5 seconds
         setTimeout(() => {
             document.querySelector(".site-view .section-container").classList.remove("loading");
-        }, 3500);
+        }, 8000);
     }
 }
 
