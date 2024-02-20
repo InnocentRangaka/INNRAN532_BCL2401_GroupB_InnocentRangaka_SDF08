@@ -113,6 +113,7 @@ function viewPortfolioItem(){
             createIframe.setAttribute("onload", "this.style.opacity = 1");
             createIframe.loading = "lazy";
             createIframe.width = itemViewer.offsetWidth;
+            createIframe.height = itemViewer.offsetWidth;
             
             itemViewer.innerHTML = createIframe.outerHTML;
             name = fpath.replace("-", " ").replace("_", " ");
